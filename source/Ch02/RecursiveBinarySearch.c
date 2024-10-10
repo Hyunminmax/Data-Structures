@@ -4,11 +4,11 @@ int BSearchRecur(int ar[], int first, int last, int target)
 {
 	int mid;
 	if(first > last)
-		return -1;    // -1ÀÇ ¹İÈ¯Àº Å½»öÀÇ ½ÇÆĞ¸¦ ÀÇ¹Ì
-	mid = (first+last) / 2;    // Å½»ö´ë»óÀÇ Áß¾ÓÀ» Ã£´Â´Ù.
+		return -1;    // -1ì˜ ë°˜í™˜ì€ íƒìƒ‰ì˜ ì‹¤íŒ¨ë¥¼ ì˜ë¯¸
+	mid = (first+last) / 2;    // íƒìƒ‰ëŒ€ìƒì˜ ì¤‘ì•™ì„ ì°¾ëŠ”ë‹¤.
 
 	if(ar[mid] == target)
-		return mid;    // °Ë»öµÈ Å¸°ÙÀÇ ÀÎµ¦½º °ª ¹İÈ¯
+		return mid;    // ê²€ìƒ‰ëœ íƒ€ê²Ÿì˜ ì¸ë±ìŠ¤ ê°’ ë°˜í™˜
 	else if(target < ar[mid])
 		return BSearchRecur(ar, first, mid-1, target);
 	else
@@ -22,15 +22,15 @@ int main(void)
 
 	idx = BSearchRecur(arr, 0, sizeof(arr)/sizeof(int)-1, 7);
 	if(idx == -1)
-		printf("Å½»ö ½ÇÆĞ \n");
+		printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
 	else
-		printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+		printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 
 	idx = BSearchRecur(arr, 0, sizeof(arr)/sizeof(int)-1, 2);
 	if(idx == -1)
-		printf("Å½»ö ½ÇÆĞ \n");
+		printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
 	else
-		printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+		printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 
 	return 0;
 }
