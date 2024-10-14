@@ -5,7 +5,7 @@ int BSearch(int ar[], int len, int target)
 	int first=0;
 	int last=len-1;
 	int mid; 
-	int opCount=0;   // ºñ±³¿¬»êÀÇ È½¼ö¸¦ ±â·Ï
+	int opCount=0;   // ë¹„êµì—°ì‚°ì˜ íšŸìˆ˜ë¥¼ ê¸°ë¡
 
 	while(first<=last)
 	{
@@ -22,39 +22,39 @@ int BSearch(int ar[], int len, int target)
 			else
 				first=mid+1;
 		}
-		opCount+=1;   // ºñ±³¿¬»êÀÇ È½¼ö 1 Áõ°¡
+		opCount+=1;   // ë¹„êµì—°ì‚°ì˜ íšŸìˆ˜ 1 ì¦ê°€
 	}
-	printf("ºñ±³¿¬»ê È½¼ö: %d \n", opCount);  // Å½»ö ½ÇÆĞ ½Ã ¿¬»êÈ½¼ö Ãâ·Â
+	printf("ë¹„êµì—°ì‚° íšŸìˆ˜: %d \n", opCount);  // íƒìƒ‰ ì‹¤íŒ¨ ì‹œ ì—°ì‚°íšŸìˆ˜ ì¶œë ¥
 	return -1;
 } 
 
 int main(void)
 {
-	int arr1[500]={0,};    // ¸ğµç ¿ä¼Ò 0À¸·Î ÃÊ±âÈ­
-	int arr2[5000]={0,};    // ¸ğµç ¿ä¼Ò 0À¸·Î ÃÊ±âÈ­
-	int arr3[50000]={0,};    // ¸ğµç ¿ä¼Ò 0À¸·Î ÃÊ±âÈ­
+	int arr1[500]={0,};    // ëª¨ë“  ìš”ì†Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+	int arr2[5000]={0,};    // ëª¨ë“  ìš”ì†Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+	int arr3[50000]={0,};    // ëª¨ë“  ìš”ì†Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 	int idx;
 
-	// ÀúÀåµÇÁö ¾ÊÀº Á¤¼ö 1À» Ã£À¸¶ó°í ¸í·É
+	// ì €ì¥ë˜ì§€ ì•Šì€ ì •ìˆ˜ 1ì„ ì°¾ìœ¼ë¼ê³  ëª…ë ¹
 	idx=BSearch(arr1, sizeof(arr1)/sizeof(int), 1);
 	if(idx==-1)
-		printf("Å½»ö ½ÇÆĞ \n\n");
+		printf("íƒìƒ‰ ì‹¤íŒ¨ \n\n");
 	else
-		printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+		printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 
-	// ÀúÀåµÇÁö ¾ÊÀº Á¤¼ö 2¸¦ Ã£À¸¶ó°í ¸í·É
+	// ì €ì¥ë˜ì§€ ì•Šì€ ì •ìˆ˜ 2ë¥¼ ì°¾ìœ¼ë¼ê³  ëª…ë ¹
 	idx=BSearch(arr2, sizeof(arr2)/sizeof(int), 2);
 	if(idx==-1)
-		printf("Å½»ö ½ÇÆĞ \n\n");
+		printf("íƒìƒ‰ ì‹¤íŒ¨ \n\n");
 	else
-		printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+		printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 
-	// ÀúÀåµÇÁö ¾ÊÀº Á¤¼ö 3À» Ã£À¸¶ó°í ¸í·É
+	// ì €ì¥ë˜ì§€ ì•Šì€ ì •ìˆ˜ 3ì„ ì°¾ìœ¼ë¼ê³  ëª…ë ¹
 	idx=BSearch(arr3, sizeof(arr3)/sizeof(int), 3);
 	if(idx==-1)
-		printf("Å½»ö ½ÇÆĞ \n\n");
+		printf("íƒìƒ‰ ì‹¤íŒ¨ \n\n");
 	else
-		printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+		printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 
 	return 0;
 }
