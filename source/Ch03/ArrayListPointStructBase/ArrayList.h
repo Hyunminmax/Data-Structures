@@ -1,7 +1,7 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
-#include "Point.h"     // Ã¹ ¹øÂ° º¯°æ
+#include "Point.h"     // ì²« ë²ˆì§¸ ë³€ê²½
 
 #define TRUE	1
 #define FALSE	0
@@ -9,7 +9,7 @@
 #define LIST_LEN	100
 
 // typedef int LData;
-typedef Point * LData;     // µÎ ¹øÂ° º¯°æ
+typedef Point * LData;     // ë‘ ë²ˆì§¸ ë³€ê²½
 
 typedef struct __ArrayList
 {
