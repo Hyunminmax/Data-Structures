@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "ArrayList.h"
 // 리스트 전체의 합
+// 헤더 파일에 추가해보는 것도 재미있을듯.
 void Ltotal(List * list){
     int data;
     int total;
 
-// 리스트 전체의 합
     if(LFirst(list, &data)){
             total = data;
         while(LNext(list, &data)){
