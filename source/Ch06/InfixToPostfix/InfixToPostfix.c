@@ -17,7 +17,7 @@ int GetOpPrec(char op)
 		return 1;
 	}
 
-	return -1;   // µî·ÏµÇÁö ¾ÊÀº ¿¬»êÀÚ
+	return -1;   // ë“±ë¡ë˜ì§€ ì•Šì€ ì—°ì‚°ì
 }
 
 int WhoPrecOp(char op1, char op2)

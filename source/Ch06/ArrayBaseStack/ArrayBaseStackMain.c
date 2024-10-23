@@ -3,16 +3,16 @@
 
 int main(void)
 {
-	// StackÀÇ »ı¼º ¹× ÃÊ±âÈ­ ///////
+	// Stackì˜ ìƒì„± ë° ì´ˆê¸°í™” ///////
 	Stack stack;
 	StackInit(&stack);
 
-	// µ¥ÀÌÅÍ ³Ö±â ///////
+	// ë°ì´í„° ë„£ê¸° ///////
 	SPush(&stack, 1);  SPush(&stack, 2);
 	SPush(&stack, 3);  SPush(&stack, 4);
 	SPush(&stack, 5);
 
-	// µ¥ÀÌÅÍ ²¨³»±â ///////
+	// ë°ì´í„° êº¼ë‚´ê¸° ///////
 	while(!SIsEmpty(&stack))
 		printf("%d ", SPop(&stack)); 
 

@@ -17,11 +17,11 @@ int EvalRPNExp(char exp[])
 
 		if(isdigit(tok))
 		{
-			SPush(&stack, tok - '0');     // ¼ıÀÚ·Î º¯È¯ÇÏ¿© PUSH!
+			SPush(&stack, tok - '0');     // ìˆ«ìë¡œ ë³€í™˜í•˜ì—¬ PUSH!
 		}
 		else
 		{
-			op2 = SPop(&stack);     // ¸ÕÀú ²¨³½ °ªÀÌ µÎ ¹øÂ° ÇÇ¿¬»êÀÚ!
+			op2 = SPop(&stack);     // ë¨¼ì € êº¼ë‚¸ ê°’ì´ ë‘ ë²ˆì§¸ í”¼ì—°ì‚°ì!
 			op1 = SPop(&stack);
 
 			switch(tok)
