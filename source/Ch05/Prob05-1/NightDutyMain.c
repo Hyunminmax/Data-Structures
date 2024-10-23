@@ -12,11 +12,11 @@ int main(void)
 	int i;
 	Employee * pemp;
 
-	// ListÀÇ »ý¼º ¹× ÃÊ±âÈ­ ///////
+	// Listì˜ ìƒì„± ë° ì´ˆê¸°í™” ///////
 	List list;
 	ListInit(&list);
 
-	// 4¸íÀÇ µ¥ÀÌÅÍ ÀúÀå ///////
+	// 4ëª…ì˜ ë°ì´í„° ì €ìž¥ ///////
 	pemp = (Employee*)malloc(sizeof(Employee));
 	pemp->empNum = 11111;
 	strcpy(pemp->name, "Terry");
@@ -37,15 +37,15 @@ int main(void)
 	strcpy(pemp->name, "Sunny");
 	LInsert(&list, pemp);
 
-	// Terry µÚ·Î 3ÀÏ µÚ ´çÁ÷ÀÚ´Â? ///////
+	// Terry ë’¤ë¡œ 3ì¼ ë’¤ ë‹¹ì§ìžëŠ”? ///////
 	pemp = WhosNightDuty(&list, "Tery", 3);
 	ShowEmployeeInfo(pemp);
 
-	// Sunny µÚ·Î 15ÀÏ µÚ ´çÁ÷ÀÚ´Â? ///////
+	// Sunny ë’¤ë¡œ 15ì¼ ë’¤ ë‹¹ì§ìžëŠ”? ///////
 	pemp = WhosNightDuty(&list, "Sunny", 15);
 	ShowEmployeeInfo(pemp);
 
-	// ÇÒ´çµÈ ¸Þ¸ð¸®ÀÇ ÀüÃ¼ ¼Ò¸ê ///////
+	// í• ë‹¹ëœ ë©”ëª¨ë¦¬ì˜ ì „ì²´ ì†Œë©¸ ///////
 	if(LFirst(&list, &pemp))
 	{
 		free(pemp);
@@ -67,7 +67,7 @@ Employee * WhosNightDuty(List * plist, char * name, int day)
 
 	num = LCount(plist);
 
-	// ÀÌ¸§ Ã£±â ///////
+	// ì´ë¦„ ì°¾ê¸° ///////
 	LFirst(plist, &ret);
 
 	if(strcmp(ret->name, name) != 0)
@@ -79,11 +79,11 @@ Employee * WhosNightDuty(List * plist, char * name, int day)
 			if(strcmp(ret->name, name) == 0)
 				break;
 		}
-		if(i >= num-1)     // ÇØ´çÇÏ´Â ÀÌ¸§ÀÌ Á¸ÀçÇÏÁö ¾ÊÀ¸¸é
+		if(i >= num-1)     // í•´ë‹¹í•˜ëŠ” ì´ë¦„ì´ ì¡´ìž¬í•˜ì§€ ì•Šìœ¼ë©´
 			return NULL;
 	}
 
-	// ±× µÚ·Î ¸çÄ¥ µÚ ///////
+	// ê·¸ ë’¤ë¡œ ë©°ì¹  ë’¤ ///////
 	for(i=0; i<day; i++)
 		LNext(plist, &ret);
 

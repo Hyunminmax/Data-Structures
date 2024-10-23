@@ -7,13 +7,13 @@ int main(void)
 	int data;
 	ListInit(&list);
 
-	// 8°³ÀÇ µ¥ÀÌÅÍ ÀúÀå ///////
+	// 8ê°œì˜ ë°ì´í„° ì €ì¥ ///////
 	LInsert(&list, 1);  LInsert(&list, 2);
 	LInsert(&list, 3);  LInsert(&list, 4);
 	LInsert(&list, 5);  LInsert(&list, 6);
 	LInsert(&list, 7);  LInsert(&list, 8);
 
-	// ÀúÀåµÈ µ¥ÀÌÅÍÀÇ Á¶È¸ ///////
+	// ì €ì¥ëœ ë°ì´í„°ì˜ ì¡°íšŒ ///////
 	if(LFirst(&list, &data))
 	{
 		printf("%d ", data);
@@ -24,7 +24,7 @@ int main(void)
 		printf("\n");
 	}
 
-	// 2ÀÇ ¹è¼ö ÀüºÎ »èÁ¦ ///////
+	// 2ì˜ ë°°ìˆ˜ ì „ë¶€ ì‚­ì œ ///////
 	if(LFirst(&list, &data))
 	{
 		if(data%2 == 0)
@@ -37,7 +37,7 @@ int main(void)
 		}
 	}
 
-	// ÀúÀåµÈ µ¥ÀÌÅÍÀÇ Àç Á¶È¸ ///////
+	// ì €ì¥ëœ ë°ì´í„°ì˜ ì¬ ì¡°íšŒ ///////
 	if(LFirst(&list, &data))
 	{
 		printf("%d ", data);

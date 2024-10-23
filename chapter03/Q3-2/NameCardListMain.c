@@ -6,7 +6,7 @@
 
 int main(){
 	List list;
-	NameCard * card; // 여기가 이해가 잘 안되네..
+	NameCard * card; // 여기가 이해가 잘 안되네.. 구조체 변수 선언이다 이놈아. 
 	ListInit(&list);
 	char tName[30];
 	char newNum[30];
@@ -15,7 +15,7 @@ int main(){
 	card = MakeNameCard("하하", "111");
 	LInsert(&list, card);
 
-	card = MakeNameCard("호호", "222");
+	card = MakeNameCard("aa", "222");
 	LInsert(&list, card);
 
 	card = MakeNameCard("33", "333");

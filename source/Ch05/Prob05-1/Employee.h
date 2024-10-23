@@ -3,8 +3,8 @@
 
 typedef struct _Employee
 {
-	int empNum;      // »ç¹ø
-	char name[30];    // ÀÌ¸§
+	int empNum;      // ì‚¬ë²ˆ
+	char name[30];    // ì´ë¦„
 } Employee;
 
 #endif

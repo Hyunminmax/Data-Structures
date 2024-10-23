@@ -51,7 +51,7 @@ void LInsert(List * plist, Data data)
 
 int LFirst(List * plist, Data * pdata)
 {
-	if(plist->tail == NULL)    // ÀúÀåµÈ ³ëµå°¡ ¾ø´Ù¸é
+	if(plist->tail == NULL)    // ì €ìž¥ëœ ë…¸ë“œê°€ ì—†ë‹¤ë©´
 		return FALSE;
 
 	plist->before = plist->tail;
@@ -63,7 +63,7 @@ int LFirst(List * plist, Data * pdata)
 
 int LNext(List * plist, Data * pdata)
 {
-	if(plist->tail == NULL)    // ÀúÀåµÈ ³ëµå°¡ ¾ø´Ù¸é
+	if(plist->tail == NULL)    // ì €ìž¥ëœ ë…¸ë“œê°€ ì—†ë‹¤ë©´
 		return FALSE;
 
 	plist->before = plist->cur;
@@ -78,9 +78,9 @@ Data LRemove(List * plist)
 	Node * rpos = plist->cur;
 	Data rdata = rpos->data;
 
-	if(rpos == plist->tail)    // »èÁ¦ ´ë»óÀ» tailÀÌ °¡¸®Å²´Ù¸é
+	if(rpos == plist->tail)    // ì‚­ì œ ëŒ€ìƒì„ tailì´ ê°€ë¦¬í‚¨ë‹¤ë©´
 	{
-		if(plist->tail == plist->tail->next)    // ±×¸®°í ¸¶Áö¸· ³²Àº ³ëµå¶ó¸é
+		if(plist->tail == plist->tail->next)    // ê·¸ë¦¬ê³  ë§ˆì§€ë§‰ ë‚¨ì€ ë…¸ë“œë¼ë©´
 			plist->tail = NULL;
 		else
 			plist->tail = plist->before;
