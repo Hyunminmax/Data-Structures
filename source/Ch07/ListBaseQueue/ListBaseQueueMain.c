@@ -3,16 +3,16 @@
 
 int main(void)
 {
-	// QueueÀÇ »ı¼º ¹× ÃÊ±âÈ­ ///////
+	// Queueì˜ ìƒì„± ë° ì´ˆê¸°í™” ///////
 	Queue q;
 	QueueInit(&q);
 
-	// µ¥ÀÌÅÍ ³Ö±â ///////
+	// ë°ì´í„° ë„£ê¸° ///////
 	Enqueue(&q, 1);  Enqueue(&q, 2);
 	Enqueue(&q, 3);  Enqueue(&q, 4);
 	Enqueue(&q, 5);
 
-	// µ¥ÀÌÅÍ ²¨³»±â ///////
+	// ë°ì´í„° êº¼ë‚´ê¸° ///////
 	while(!QIsEmpty(&q))
 		printf("%d ", Dequeue(&q)); 
 

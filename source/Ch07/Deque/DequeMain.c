@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	// DequeÀÇ »ı¼º ¹× ÃÊ±âÈ­ ///////
+	// Dequeì˜ ìƒì„± ë° ì´ˆê¸°í™” ///////
 	Deque deq;
 	DequeInit(&deq);
 
-	// µ¥ÀÌÅÍ ³Ö±â 1Â÷ ///////
+	// ë°ì´í„° ë„£ê¸° 1ì°¨ ///////
 	DQAddFirst(&deq, 3); 
 	DQAddFirst(&deq, 2); 
 	DQAddFirst(&deq, 1); 
@@ -16,13 +16,13 @@ int main(void)
 	DQAddLast(&deq, 5); 
 	DQAddLast(&deq, 6);
 
-	// µ¥ÀÌÅÍ ²¨³»±â 1Â÷ ///////
+	// ë°ì´í„° êº¼ë‚´ê¸° 1ì°¨ ///////
 	while(!DQIsEmpty(&deq))
 		printf("%d ", DQRemoveFirst(&deq));
 
 	printf("\n");
 
-	// µ¥ÀÌÅÍ ³Ö±â 2Â÷ ///////
+	// ë°ì´í„° ë„£ê¸° 2ì°¨ ///////
 	DQAddFirst(&deq, 3); 
 	DQAddFirst(&deq, 2); 
 	DQAddFirst(&deq, 1);
@@ -31,7 +31,7 @@ int main(void)
 	DQAddLast(&deq, 5); 
 	DQAddLast(&deq, 6);
 
-	// µ¥ÀÌÅÍ ²¨³»±â 2Â÷ ///////
+	// ë°ì´í„° êº¼ë‚´ê¸° 2ì°¨ ///////
 	while(!DQIsEmpty(&deq))
 		printf("%d ", DQRemoveLast(&deq));
 

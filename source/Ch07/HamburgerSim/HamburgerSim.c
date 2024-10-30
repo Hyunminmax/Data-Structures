@@ -3,19 +3,19 @@
 #include <time.h>
 #include "CircularQueue.h"
 
-#define	CUS_COME_TERM	15		// °í°´ÀÇ ÁÖ¹® °£°İ: ÃÊ ´ÜÀ§
+#define	CUS_COME_TERM	15		// ê³ ê°ì˜ ì£¼ë¬¸ ê°„ê²©: ì´ˆ ë‹¨ìœ„
 
-#define CHE_BUR		0		// Ä¡Áî¹ö°Å »ó¼ö 
-#define BUL_BUR		1		// ºÒ°í±â¹ö°Å »ó¼ö
-#define DUB_BUR		2		// ´õºí¹ö°Å »ó¼ö
+#define CHE_BUR		0		// ì¹˜ì¦ˆë²„ê±° ìƒìˆ˜ 
+#define BUL_BUR		1		// ë¶ˆê³ ê¸°ë²„ê±° ìƒìˆ˜
+#define DUB_BUR		2		// ë”ë¸”ë²„ê±° ìƒìˆ˜
 
-#define CHE_TERM	12		// Ä¡Áî¹ö°Å Á¦ÀÛ ½Ã°£: ÃÊ ´ÜÀ§
-#define BUL_TERM	15		// ºÒ°í±â¹ö°Å Á¦ÀÛ ½Ã°£: ÃÊ ´ÜÀ§
-#define DUB_TERM	24		// ´õºí¹ö°Å Á¦ÀÛ ½Ã°£: ÃÊ ´ÜÀ§
+#define CHE_TERM	12		// ì¹˜ì¦ˆë²„ê±° ì œì‘ ì‹œê°„: ì´ˆ ë‹¨ìœ„
+#define BUL_TERM	15		// ë¶ˆê³ ê¸°ë²„ê±° ì œì‘ ì‹œê°„: ì´ˆ ë‹¨ìœ„
+#define DUB_TERM	24		// ë”ë¸”ë²„ê±° ì œì‘ ì‹œê°„: ì´ˆ ë‹¨ìœ„
 
 int main(void)
 {
-	int makeProc=0;			// ÇÜ¹ö°Å Á¦ÀÛ ÁøÇà»óÈ²
+	int makeProc=0;			// í–„ë²„ê±° ì œì‘ ì§„í–‰ìƒí™©
 	int cheOrder=0, bulOrder=0, dubOrder=0;
 	int sec;
 
@@ -24,7 +24,7 @@ int main(void)
 	QueueInit(&que);
 	srand(time(NULL));
 
-	// ¾Æ·¡ for¹®ÀÇ 1È¸ È¸ÀüÀº 1ÃÊÀÇ ½Ã°£ Èå¸§À» ÀÇ¹ÌÇÔ
+	// ì•„ë˜ forë¬¸ì˜ 1íšŒ íšŒì „ì€ 1ì´ˆì˜ ì‹œê°„ íë¦„ì„ ì˜ë¯¸í•¨
 	for(sec=0; sec<3600; sec++)
 	{
 		if(sec % CUS_COME_TERM == 0) 
