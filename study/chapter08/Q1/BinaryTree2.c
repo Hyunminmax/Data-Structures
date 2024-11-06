@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "BinaryTree2.h"
 
-// 문제 08-1 관련 DeleteTree 함수의 정의가 추가된 소스파일
-
 BTreeNode * MakeBTreeNode(void)
 {
 	BTreeNode * nd = (BTreeNode*)malloc(sizeof(BTreeNode));
@@ -79,14 +77,26 @@ void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action)
 	action(bt->data);
 }
 
-void DeleteTree(BTreeNode * bt)
-{
-	if(bt == NULL)
+void Deletetree(BTreeNode * bt){
+
+	// 재귀 탈출조건
+	if(bt == NULL){
 		return;
+	}
 
-	DeleteTree(bt->left);
-	DeleteTree(bt->right);
-
-	printf("del tree data: %d \n", bt->data);
+	// 재귀
+	Deletetree(bt->left); 
+	Deletetree(bt->right);
+	
+	// 삭제되는 bt 노드의 정보
+	printf("Deleted tree Node's data: %d\n", bt->data);
 	free(bt);
+	// bt = NULL;
+
+	// 첫 접근은 아래와 같이 ㅠㅜ
+	// if(bt->left == NULL && bt->right == NULL){
+	// 	free(bt);
+	// }
+	// Deletetree(bt);
+
 }

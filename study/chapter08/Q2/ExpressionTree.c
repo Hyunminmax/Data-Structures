@@ -76,18 +76,42 @@ void ShowPrefixTypeExp(BTreeNode * bt)
 
 void ShowInfixTypeExp(BTreeNode * bt)
 {
-	if(bt == NULL)
+	// 다음 함수를 사용하는 것이 아닌 새로 생성하는 것
+	// InorderTraverse(bt, ShowNodeData);
+
+	// 주어지는 수식은 "12+7*" 후위
+	// 수식 표기법은
+	// 				*
+	// 		+				7
+	// 1		2
+	// 1+2*7
+	// 목표는 ((1+2)*7) 중위
+
+	if(bt == NULL){
 		return;
+	}
+
+	// 중위 순회는 bt를 기준으로 좌 중 우 순서로 확인?
+	// ???? 연산자 앞에 피연산자가 하나만 있을수 있나??? 
+	// ???? 왜 or 연산이지? ????
+	// !!!! && 연산자로도 정상동작한다. 차이는? !!!!
+	if(bt->left != NULL || bt->right != NULL){
+	// if(bt->left != NULL && bt->right != NULL){
+		printf("(");
+	}
 	
-	if(bt->left != NULL || bt->right != NULL)
-		printf(" ( ");
-		
+	// 재귀
+	// 피연산자, 연산자 출력
 	ShowInfixTypeExp(bt->left);
 	ShowNodeData(bt->data);
 	ShowInfixTypeExp(bt->right);
 
-	if(bt->left != NULL || bt->right != NULL)
-		printf(" ) ");
+	// 
+	if(bt->left != NULL || bt->right != NULL){
+	// if(bt->left != NULL && bt->right != NULL){
+		printf(")");
+	}
+
 } 
 
 void ShowPostfixTypeExp(BTreeNode * bt)

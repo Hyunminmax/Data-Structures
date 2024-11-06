@@ -1,8 +1,6 @@
 #ifndef __BINARY_TREE2_H__
 #define __BINARY_TREE2_H__
 
-// 문제 08-1 관련 DeleteTree 함수의 선언이 추가된 헤더파일
-
 typedef int BTData;
 
 typedef struct _bTreeNode
@@ -28,6 +26,6 @@ void PreorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 void InorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 
-void DeleteTree(BTreeNode * bt);
+void Deletetree(BTreeNode * bt);
 
 #endif
