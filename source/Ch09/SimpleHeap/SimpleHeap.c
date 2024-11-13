@@ -30,13 +30,13 @@ int GetRChildIDX(int idx)
 
 int GetHiPriChildIDX(Heap * ph, int idx)
 {
-	if(GetLChildIDX(idx) > ph->numOfData)    // ÀÚ½Ä ³ëµå°¡ ¾ø´Ù¸é
+	if(GetLChildIDX(idx) > ph->numOfData)    // ìì‹ ë…¸ë“œê°€ ì—†ë‹¤ë©´
 		return 0;
 
-	else if(GetLChildIDX(idx) == ph->numOfData)    // ¿ŞÂÊ ÀÚ½Ä ³ëµå°¡ ¸¶Áö¸· ³ëµå¶ó¸é
+	else if(GetLChildIDX(idx) == ph->numOfData)    // ì™¼ìª½ ìì‹ ë…¸ë“œê°€ ë§ˆì§€ë§‰ ë…¸ë“œë¼ë©´
 		return GetLChildIDX(idx);
 
-	else   // ¿ŞÂÊ ÀÚ½Ä ³ëµå¿Í ¿À¸¥ÂÊ ÀÚ½Ä ³ëµåÀÇ ¿ì¼±¼øÀ§¸¦ ºñ±³
+	else   // ì™¼ìª½ ìì‹ ë…¸ë“œì™€ ì˜¤ë¥¸ìª½ ìì‹ ë…¸ë“œì˜ ìš°ì„ ìˆœìœ„ë¥¼ ë¹„êµ
 	{
 		if(ph->heapArr[GetLChildIDX(idx)].pr 
 						> ph->heapArr[GetRChildIDX(idx)].pr)
@@ -68,10 +68,10 @@ void HInsert(Heap * ph, HData data, Priority pr)
 
 HData HDelete(Heap * ph)
 {
-	HData retData = (ph->heapArr[1]).data;    // »èÁ¦ÇÒ µ¥ÀÌÅÍ ÀÓ½Ã ÀúÀå
+	HData retData = (ph->heapArr[1]).data;    // ì‚­ì œí•  ë°ì´í„° ì„ì‹œ ì €ì¥
 	HeapElem lastElem = ph->heapArr[ph->numOfData];
 
-	int parentIdx = 1;    // ·çÆ® ³ëµåÀÇ Index
+	int parentIdx = 1;    // ë£¨íŠ¸ ë…¸ë“œì˜ Index
 	int childIdx;
 
 	while(childIdx = GetHiPriChildIDX(ph, parentIdx))

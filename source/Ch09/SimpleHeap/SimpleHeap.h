@@ -11,7 +11,7 @@ typedef int Priority;
 
 typedef struct _heapElem
 {
-	Priority pr;	// °ªÀÌ ÀÛÀ»¼ö·Ï ³ôÀº ¿ì¼±¼øÀ§
+	Priority pr;	// ê°’ì´ ì‘ì„ìˆ˜ë¡ ë†’ì€ ìš°ì„ ìˆœìœ„
 	HData data;
 } HeapElem;
 
@@ -21,7 +21,7 @@ typedef struct _heap
 	HeapElem heapArr[HEAP_LEN];
 } Heap;
 
-/*** Heap °ü·Ã ¿¬»êµé ****/
+/*** Heap ê´€ë ¨ ì—°ì‚°ë“¤ ****/
 void HeapInit(Heap * ph);
 int HIsEmpty(Heap * ph);
 
