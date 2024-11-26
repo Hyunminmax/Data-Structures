@@ -25,17 +25,17 @@ int MedianOfThree(int arr[], int left, int right)
 
 int Partition(int arr[], int left, int right)
 {
-	int pIdx = MedianOfThree(arr, left, right);   // ÇÇ¹şÀ» ¼±ÅÃ!
+	int pIdx = MedianOfThree(arr, left, right);   // í”¼ë²—ì„ ì„ íƒ!
 	int pivot = arr[pIdx];
 
 	int low = left+1;
 	int high = right;
 
-	Swap(arr, left, pIdx);    // ÇÇ¹şÀ» °¡Àå ¿ŞÂÊÀ¸·Î ÀÌµ¿
+	Swap(arr, left, pIdx);    // í”¼ë²—ì„ ê°€ì¥ ì™¼ìª½ìœ¼ë¡œ ì´ë™
 
-	printf("ÇÇ¹ş: %d \n", pivot);
+	printf("í”¼ë²—: %d \n", pivot);
 
-	while(low <= high)    // ±³Â÷µÇÁö ¾ÊÀ» ¶§±îÁö ¹İº¹
+	while(low <= high)    // êµì°¨ë˜ì§€ ì•Šì„ ë•Œê¹Œì§€ ë°˜ë³µ
 	{	
 		while(pivot >= arr[low] && low <= right)
 			low++;
@@ -43,21 +43,21 @@ int Partition(int arr[], int left, int right)
 		while(pivot <= arr[high] && high >= (left+1))
 			high--;
 
-		if(low <= high)    // ±³Â÷µÇÁö ¾ÊÀº »óÅÂ¶ó¸é Swap ½ÇÇà
-			Swap(arr, low, high);    // low¿Í high°¡ °¡¸®Å°´Â ´ë»ó ±³È¯
+		if(low <= high)    // êµì°¨ë˜ì§€ ì•Šì€ ìƒíƒœë¼ë©´ Swap ì‹¤í–‰
+			Swap(arr, low, high);    // lowì™€ highê°€ ê°€ë¦¬í‚¤ëŠ” ëŒ€ìƒ êµí™˜
 	}
 
-	Swap(arr, left, high);    // ÇÇ¹ş°ú high°¡ °¡¸®Å°´Â ´ë»ó ±³È¯
-	return high;    // ¿Å°ÜÁø ÇÇ¹şÀÇ À§Ä¡ Á¤º¸ ¹İÈ¯
+	Swap(arr, left, high);    // í”¼ë²—ê³¼ highê°€ ê°€ë¦¬í‚¤ëŠ” ëŒ€ìƒ êµí™˜
+	return high;    // ì˜®ê²¨ì§„ í”¼ë²—ì˜ ìœ„ì¹˜ ì •ë³´ ë°˜í™˜
 }
 
 void QuickSort(int arr[], int left, int right)
 {
 	if(left < right)
 	{
-		int pivot = Partition(arr, left, right);    // µÑ·Î ³ª´²¼­ 
-		QuickSort(arr, left, pivot-1);    // ¿ŞÂÊ ¿µ¿ªÀ» Á¤·Ä
-		QuickSort(arr, pivot+1, right);    // ¿À¸¥ÂÊ ¿µ¿ªÀ» Á¤·Ä
+		int pivot = Partition(arr, left, right);    // ë‘˜ë¡œ ë‚˜ëˆ ì„œ 
+		QuickSort(arr, left, pivot-1);    // ì™¼ìª½ ì˜ì—­ì„ ì •ë ¬
+		QuickSort(arr, pivot+1, right);    // ì˜¤ë¥¸ìª½ ì˜ì—­ì„ ì •ë ¬
 	}
 }
 
